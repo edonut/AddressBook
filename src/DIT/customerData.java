@@ -7,13 +7,13 @@ package DIT;
 	public class customerData<java> {
 
 		
-		private int ageInt;
-		private String streetStr;
-		private String cityStr;
-		private String stateStr;
-		private String lastNameStr;
-		private String firstNameStr;
-		private String addressStr;
+		public int ageInt;
+		public String streetStr;
+		public String cityStr;
+		public String stateStr;
+		public String lastNameStr;
+		public String firstNameStr;
+		public String addressStr;
 		
 		public customerData(String firstName, String lastName, String street, String city, String state, int age) {
 			// TODO Auto-generated constructor stub
@@ -23,31 +23,13 @@ package DIT;
 			cityStr = city;
 			stateStr = state;
 			ageInt = age;
+			addressStr = (street.toUpperCase()+' '+city.toUpperCase()+' '+state.toUpperCase());
 			
 		return;
 
 	}
 
 
-
-	public customerData<java> setcustomerData(String firstName, String lastName, String street, String city, String state, int age) {
-		// TODO Auto-generated constructor stub
-		firstNameStr = firstName;
-		lastNameStr = lastName;
-		streetStr = street;
-		cityStr = city;
-		stateStr = state;
-		addressStr = (street.toUpperCase()+ ' ' + city.toUpperCase() + ' ' + state.toUpperCase());
-		ageInt = age;	
-		
-	return(this);
-	}// end customerData constructor
-	
-	//get Age
-	public int getcustomerAge(){
-		return(this.ageInt);
-	}//end get
-	
 	//get Name
 	public String getcustomerName(){
 		return(this.firstNameStr + ' ' + this.lastNameStr);	
@@ -57,9 +39,11 @@ package DIT;
 		return(this.streetStr+ ' ' + this.cityStr+ ' ' + this.stateStr );
 	}//end get	
 	//get Address
-	public String getaddressStr(){
-		return(this.addressStr );
-	}//end get 
+
+
+
+
+
 
 } //end class
 
